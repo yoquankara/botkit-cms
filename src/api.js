@@ -198,7 +198,7 @@ module.exports = function() {
 
                         var found = false;
                         try {
-                            var test = new RegExp('^' + trigger.pattern + '\\b','i');
+                            var test = new RegExp('^' + trigger.pattern + '$','i');
                             found = query.text.match(test);
                         } catch(err) {
                             console.error('ERROR IN TRIGGER REGEX', err);
